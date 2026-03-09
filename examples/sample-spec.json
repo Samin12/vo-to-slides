@@ -1,0 +1,65 @@
+{
+  "title": "Skills vs Agents — Sample",
+  "author": "Samin Yasar",
+  "slides": [
+    {
+      "type": "chapter_title",
+      "vo": "What actually is an agent?",
+      "data": {
+        "title": "What Is an Agent?",
+        "icon": "searchA",
+        "icon_color": "accent"
+      }
+    },
+    {
+      "type": "equation",
+      "vo": "You put those three things together and you get an agent",
+      "data": {
+        "title": "Model + Tools + Prompt = Agent",
+        "terms": [
+          {"icon": "brain", "label": "Model"},
+          {"icon": "wrench", "label": "Tools"},
+          {"icon": "file", "label": "Prompt"}
+        ],
+        "result": {"type": "agent_card", "label": "Agent"}
+      }
+    },
+    {
+      "type": "comparison",
+      "vo": "Smart isn't the same as experienced",
+      "data": {
+        "left": {"icon": "bulb", "label": "Smart"},
+        "right": {"icon": "grad", "label": "Experienced", "secondary_icon": "medal"},
+        "symbol": "\u2260",
+        "symbol_color": "accent"
+      }
+    },
+    {
+      "type": "three_panel",
+      "vo": "MCP is the access. Skills are the experience.",
+      "data": {
+        "title": "One Agent. Any Tool. Your Way.",
+        "left": {
+          "color": "sage",
+          "header_icon": "plug",
+          "header": "Access",
+          "items": ["Calendar", "Slack", "CRM"]
+        },
+        "right": {
+          "color": "lavender",
+          "header_icon": "bookOpen",
+          "header": "Experience",
+          "items": ["How to schedule", "How to outreach", "How to qualify"]
+        }
+      }
+    },
+    {
+      "type": "closing",
+      "vo": "Let's dive in and start playing with skills",
+      "data": {
+        "title": "Let's Build.",
+        "icons": ["rocket", "claude", "terminal"]
+      }
+    }
+  ]
+}

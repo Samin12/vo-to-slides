@@ -1,0 +1,38 @@
+{
+  "name": "anthropic-warm",
+  "background": "F5F0E8",
+  "colors": {
+    "card": "DDD5C8",
+    "cardLight": "E8E0D4",
+    "white": "FFFFFF",
+    "black": "2D2D2D",
+    "grey": "888888",
+    "greyLight": "AAAAAA",
+    "accent": "C4703F",
+    "red": "D4543C",
+    "sage": "A7BEAE",
+    "sageDark": "8DAA9A",
+    "lavender": "B8B8D1",
+    "lavenderDark": "9A9ABB",
+    "green": "6DAA6D",
+    "danger": "CC4444"
+  },
+  "fonts": {
+    "heading": "Georgia",
+    "body": "Calibri",
+    "code": "Consolas"
+  },
+  "sizes": {
+    "title": 40,
+    "heading": 32,
+    "subheading": 20,
+    "body": 14,
+    "label": 12,
+    "caption": 11
+  },
+  "claude_icon": {
+    "bg_color": "D4543C",
+    "fg_icon": "FaAsterisk",
+    "fg_color": "#FFFFFF"
+  }
+}
