@@ -1,34 +1,48 @@
 {
-  "name": "anthropic-warm",
-  "background": "F5F0E8",
+  "name": "anthropic-brand",
+  "background": "FAF9F5",
   "colors": {
-    "card": "DDD5C8",
-    "cardLight": "E8E0D4",
+    "card": "E8E6DC",
+    "cardLight": "F0EDE5",
+    "cardDark": "DDD5C8",
     "white": "FFFFFF",
-    "black": "2D2D2D",
-    "grey": "888888",
-    "greyLight": "AAAAAA",
-    "accent": "C4703F",
+    "black": "141413",
+    "grey": "B0AEA5",
+    "greyLight": "C8C5BC",
+    "accent": "D97757",
     "red": "D4543C",
+    "blue": "6A9BCC",
     "sage": "A7BEAE",
     "sageDark": "8DAA9A",
     "lavender": "B8B8D1",
     "lavenderDark": "9A9ABB",
-    "green": "6DAA6D",
+    "green": "788C5D",
     "danger": "CC4444"
   },
   "fonts": {
-    "heading": "Georgia",
-    "body": "Calibri",
-    "code": "Consolas"
+    "heading": "Poppins",
+    "headingFallback": "Arial",
+    "body": "Lora",
+    "bodyFallback": "Georgia",
+    "code": "JetBrains Mono",
+    "codeFallback": "Consolas"
   },
   "sizes": {
+    "display": 48,
     "title": 40,
     "heading": 32,
-    "subheading": 20,
-    "body": 14,
-    "label": 12,
-    "caption": 11
+    "subheading": 22,
+    "body": 16,
+    "label": 14,
+    "caption": 12
+  },
+  "spacing": {
+    "cardRadius": 12,
+    "cardPadding": 24,
+    "cardBorder": 2,
+    "iconSize": 64,
+    "iconSizeLarge": 96,
+    "arrowStroke": 3
   },
   "claude_icon": {
     "bg_color": "D4543C",
