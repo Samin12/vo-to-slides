@@ -121,6 +121,36 @@ node generate.js --spec spec.json --theme theme.json --output slides.pptx
 
 The generator reads the JSON spec, the theme config, and any assets in `assets/`, then produces the final deck.
 
+## Phase 3.5: Upload to Google Slides + Insert Screenshots
+
+Upload the deck to Google Slides, then insert any additional screenshots directly:
+
+```bash
+# Upload pptx to Google Slides
+gog drive upload -a samin@aianswer.us --convert slides.pptx
+
+# Insert screenshots directly into the Google Slides deck
+python3 scripts/insert-screenshots-gslides.py PRESENTATION_ID \
+    --url "https://docs.anthropic.com/en/docs/tool-use" \
+    --url "https://github.com/anthropics/claude-code"
+
+# Or insert from spec (all screenshot_url slides)
+python3 scripts/insert-screenshots-gslides.py PRESENTATION_ID --spec spec.json
+
+# Or insert a local image
+python3 scripts/insert-screenshots-gslides.py PRESENTATION_ID --file assets/demo.png
+
+# Insert at a specific position (default: append)
+python3 scripts/insert-screenshots-gslides.py PRESENTATION_ID --url "https://example.com" --at 5
+```
+
+The script uses Playwright to capture each URL, uploads the PNG to Google Drive, and inserts it as a full-bleed slide via the Slides API. No re-upload of the whole deck needed.
+
+**Requirements:**
+- `pip install playwright && playwright install chromium`
+- `gcloud auth login` (with Slides API enabled)
+- Google Slides API enabled: `gcloud services enable slides.googleapis.com`
+
 ## Phase 4: QA
 
 ```bash
