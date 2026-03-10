@@ -708,6 +708,32 @@ Full-bleed reference image from assets folder.
 
 ---
 
+### `screenshot` (auto-captured)
+
+A slide that will be auto-captured from a live URL using Playwright. Run `capture-screenshots.py` to convert these into `reference_image` slides.
+
+```json
+{
+  "type": "screenshot",
+  "vo": "Here's what the Claude Code interface looks like...",
+  "data": {
+    "screenshot_url": "https://claude.ai/code",
+    "screenshot_selector": ".main-content",
+    "screenshot_delay": 3000,
+    "screenshot_full_page": false
+  }
+}
+```
+
+- `screenshot_url` (required) - URL to capture
+- `screenshot_selector` (optional) - CSS selector to capture a specific element instead of full viewport
+- `screenshot_delay` (optional, default: 2000) - milliseconds to wait after page load before capturing
+- `screenshot_full_page` (optional, default: false) - capture the full scrollable page
+
+After running `capture-screenshots.py`, the slide is automatically converted to a `reference_image` with the captured PNG in `assets/`.
+
+---
+
 ## Color Keys
 
 Use these keys in `color` fields — they map to `theme.json`:

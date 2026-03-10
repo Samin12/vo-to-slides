@@ -68,6 +68,45 @@ Output a JSON spec following the schema in `spec-schema.md`. Each slide is an ob
 
 Read `spec-schema.md` for all available types and their data formats.
 
+### Screenshot slides
+
+When the script references a website, UI, dashboard, or tool that should be shown as a live screenshot (not a pre-existing asset), use the `screenshot` slide type:
+
+```json
+{
+  "type": "screenshot",
+  "vo": "Here's what Claude Code looks like...",
+  "data": {
+    "screenshot_url": "https://claude.ai/code",
+    "screenshot_selector": ".main-content",
+    "screenshot_delay": 3000
+  }
+}
+```
+
+These are auto-captured in Phase 2.5.
+
+## Phase 2.5: Capture Screenshots
+
+If the spec contains any `screenshot` slides (slides with `screenshot_url` in their data), run the capture script:
+
+```bash
+python3 scripts/capture-screenshots.py spec.json
+```
+
+This uses Playwright (headless Chromium) to:
+1. Visit each URL
+2. Wait for page load + configurable delay
+3. Capture the viewport (or a specific CSS selector)
+4. Save to `assets/screenshot-{slug}.png`
+5. Update `spec.json` in-place, converting `screenshot` slides to `reference_image` slides
+
+**Options:**
+- `--width 1920` / `--height 1080` — viewport size (default: 1920x1080 for 16:9)
+- `--full-page` — capture full scrollable page instead of viewport
+
+**Requirements:** `pip install playwright && playwright install chromium`
+
 ## Phase 3: Build the Slides
 
 Run `generate.js` with the spec to produce the `.pptx`:
